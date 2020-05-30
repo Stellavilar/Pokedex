@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Application 100% back end to present pokedex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stellavilar/Pokedex.git"
+  },
+  "author": "Vilar Stella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stellavilar/Pokedex/issues"
+  },
+  "homepage": "https://github.com/Stellavilar/Pokedex#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "pg": "^8.2.1"
+  }
+}
