@@ -28,11 +28,18 @@ const mainController = {
             console.log(err);
             return res.status(500).send(err);
           }
-          res.render('details', {
-            pokemon: data.rows[0]
-          });
+          db_connection.getPokemonTypes(pokemonNum, (err2, data2) => {
+            if (err2) {
+              console.log(err2);
+              return res.status(500).send(err2);
+            }
+            res.render('details', {
+              pokemon: data.rows[0],
+              types: data2.rows
+            });
         });
-      }
+      });
+    }
 
    
 };

@@ -133,3 +133,8 @@ h1 {
 .list-link {
     color: #EFE3E3;
 }
+.details .types .type {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+} 
