@@ -59,3 +59,14 @@ span {
     color: #EFE3E3;
 
 }
+/*Types page*/
+.link-type {
+    color: white;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
