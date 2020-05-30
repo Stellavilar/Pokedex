@@ -137,4 +137,41 @@ h1 {
     margin: 8px;
     padding: 8px;
     border-radius: 5px;
-} 
+}
+/*Search bar*/
+form {
+    display: flex;
+}
+form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  /* Style the submit button */
+  form button {
+    /* float: left; */
+    width: 20%;
+    padding: 10px;
+    background: #aa3738;
+    color: white;
+    font-size: 17px;
+    border-radius: 0px 5px 5px 0px;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border: solid grey 1px;
+  }
+  
+  form button:hover {
+    background: #982C2C;
+  }
+  
+  /* Clear floats */
+  form ::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

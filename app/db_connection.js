@@ -26,6 +26,11 @@ const db_connection = {
       const myQuery = `SELECT * FROM pokemon WHERE numero=${numero}`;
       client.query(myQuery, callback);
     },
+    getPokemonByLikeName: (name, callback) => {
+      const myQuery = `SELECT * FROM pokemon
+      WHERE nom ILIKE '%${name}%'`;
+      client.query(myQuery, callback);
+    },
   
     
       

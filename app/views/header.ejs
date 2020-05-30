@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Pokédex</title>
 </head>
@@ -11,6 +12,10 @@
     <header>
         <nav>
           <a class="a-header-home"href="/" id="home">Pokedex</a>
+          <form action="/search" method="post">
+            <input type="text" name="nom" placeholder="Rechercher">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
           <div class="header-nav">
             <a class="a-header" href="/">Liste</a>
             <a class="a-header" href="/types">Types</a>

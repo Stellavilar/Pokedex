@@ -12,6 +12,11 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
+// on rajoute urlencoded pour traiter les routes en POST
+app.use(express.urlencoded({
+    extended: true
+  }));
+  
 
 const router = require ('./app/router');
 app.use(router);
