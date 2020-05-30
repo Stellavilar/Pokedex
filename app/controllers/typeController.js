@@ -11,7 +11,19 @@ const typeController = {
                 types:data.rows
             })
         })
-    }
+    },
+    pokemonsByType: (req,res) => {
+        const typeId = req.params.typeId;
+        db_connection.getPokemonsByType(typeId, (err,data) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).sned(err);
+            }
+            res.render('home', {
+                pokemons: data.rows,
+            });
+        });
+    },
 
 };
 

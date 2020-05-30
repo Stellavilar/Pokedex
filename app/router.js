@@ -5,8 +5,11 @@ const router = express.Router();
 const mainController = require ('./controllers/mainController');
 const typeController = require ('./controllers/typeController');
 
+
 router.get('/', mainController.homePage);
+
 router.get('/types', typeController.typesPage);
+router.get('/type/:typeId', typeController.pokemonsByType);
 
 
 module.exports = router;

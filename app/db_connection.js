@@ -10,6 +10,12 @@ const db_connection = {
       const myQuery = "SELECT * FROM type";
       client.query(myQuery, callback);
     },
+    getPokemonsByType: (typeId, callback) => {
+      const myQuery = `SELECT * FROM pokemon p
+      JOIN pokemon_type pt ON p.numero=pt.pokemon_numero
+      WHERE pt.type_id=${typeId}`;
+      client.query(myQuery, callback);
+    },
   
     
       
