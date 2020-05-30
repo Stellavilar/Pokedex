@@ -12,6 +12,28 @@ const mainController = {
             });
         });
     },
+    pokemonPage: (req, res) => {
+        // un objet partagé par toutes les views, qui contient les labels des stats
+        res.locals.statsLabels = {
+          pv: 'PV',
+          attaque: 'Attaque',
+          defense: 'Défense',
+          attaque_spe:'Attaque Spé.',
+          defense_spe:'Défense Spé.',
+          vitesse: 'Vitesse'
+        };
+        const pokemonNum = req.params.numero;
+        db_connection.getPokemonDetails(pokemonNum, (err, data) => {
+          if (err) {
+            console.log(err);
+            return res.status(500).send(err);
+          }
+          res.render('details', {
+            pokemon: data.rows[0]
+          });
+        });
+      }
+
    
 };
 

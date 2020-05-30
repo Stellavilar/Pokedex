@@ -16,6 +16,10 @@ const db_connection = {
       WHERE pt.type_id=${typeId}`;
       client.query(myQuery, callback);
     },
+    getPokemonDetails: (numero, callback) => {
+      const myQuery = `SELECT * FROM pokemon WHERE numero=${numero}`;
+      client.query(myQuery, callback);
+    },
   
     
       
