@@ -3,7 +3,7 @@
 <% for(let pokemon of pokemons) { %>
     <div class="thumbnail">
         <img src="/img/<%= pokemon.numero %>.png" alt="Illustration de <%= pokemon.nom %>">
-        <span><%= pokemon.nom %></span>
+        <span># <%= pokemon.numero %> <%= pokemon.nom %></span>
     </div>
 <% } %>
 
